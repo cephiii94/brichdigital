@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Mail, Twitter, GitBranch } from "lucide-react";
+import { Mail, X, GitBranch } from "lucide-react";
 
 const socialLinks = [
   {
@@ -13,7 +13,7 @@ const socialLinks = [
   {
     label: "Twitter / X",
     href: "https://twitter.com",
-    icon: <Twitter size={16} />,
+    icon: <X size={16} />,
   },
   {
     label: "Email",
