@@ -1,4 +1,10 @@
-// Shared animation constants for Framer Motion
-// Typed as tuple so TypeScript accepts it as Easing type
+// Shared animation transition presets for Framer Motion
+// Using named easing strings to satisfy strict TypeScript types
 
-export const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+import type { Transition } from "framer-motion";
+
+export const transition = (delay = 0, duration = 0.55): Transition => ({
+  duration,
+  delay,
+  ease: "easeOut",
+});

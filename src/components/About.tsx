@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Code2, Cpu, Layers } from "lucide-react";
-import { EASE } from "@/lib/motion";
+import { transition } from "@/lib/motion";
 
 const pillars = [
   {
@@ -33,7 +33,7 @@ export default function About() {
             ref={ref}
             initial={{ opacity: 0, x: -24 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, ease: EASE }}
+            transition={transition(0, 0.6)}
           >
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-100 border border-sky-200 text-sky-600 text-xs font-semibold tracking-wide uppercase mb-5">
               About Us
@@ -78,7 +78,7 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, x: 24 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.1, ease: EASE }}
+            transition={transition(0.1, 0.6)}
             className="relative"
           >
             <div className="bg-gradient-to-br from-sky-50 to-slate-100 rounded-2xl border border-slate-100 p-8 space-y-6">

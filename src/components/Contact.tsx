@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Mail, X, GitBranch } from "lucide-react";
-import { EASE } from "@/lib/motion";
+import { transition } from "@/lib/motion";
 
 const socialLinks = [
   {
@@ -37,7 +37,7 @@ export default function Contact() {
           ref={ref}
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.55, ease: EASE }}
+          transition={transition()}
           className="space-y-5"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-100 border border-sky-200 text-sky-600 text-xs font-semibold tracking-wide uppercase">
