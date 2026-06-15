@@ -22,7 +22,7 @@ interface Product {
   description: string;
   icon: React.ReactNode;
   tags: string[];
-  status: "Live" | "Beta" | "Under Construction";
+  status: "Live" | "Beta" | "Under Construction" | "In Development";
   href: string;
   accent: string;
   accentBg: string;
@@ -80,7 +80,7 @@ const products: Product[] = [
       "A clean, minimal workspace for writing and organizing your notes online. Access them from anywhere, keep them private or share them — no setup required. Currently in active development.",
     icon: <NotebookPen size={22} />,
     tags: ["Productivity", "Notes", "Web App"],
-    status: "Under Construction",
+    status: "In Development",
     href: "https://memo.zone.id",
     accent: "text-amber-600",
     accentBg: "bg-amber-50 border-amber-100",
@@ -119,12 +119,14 @@ const statusColors: Record<Product["status"], string> = {
   Live: "bg-emerald-100 text-emerald-700",
   Beta: "bg-sky-100 text-sky-700",
   "In Development": "bg-amber-100 text-amber-700",
+  "Under Construction": "bg-amber-100 text-amber-700",
 };
 
 const statusIcons: Record<Product["status"], React.ReactNode> = {
   Live: null,
   Beta: null,
   "In Development": <Construction size={10} />,
+  "Under Construction": <Construction size={10} />,
 };
 
 function ProductCard({ product, index }: { product: Product; index: number }) {

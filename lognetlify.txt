@@ -1,0 +1,128 @@
+4:38:52 AM: build-image version: ac6eb13fbf000e5c09ad677efd8b7c3c2d0142b6 (noble-new-builds)
+4:38:52 AM: buildbot version: a4e69ecd307ba0c352dfef5d0d39913f2dec70dc
+4:38:53 AM: Fetching cached dependencies
+4:38:53 AM: Failed to fetch cache, continuing with build
+4:38:53 AM: Starting to prepare the repo for build
+4:38:53 AM: No cached dependencies found. Cloning fresh repo
+4:38:53 AM: git clone --filter=blob:none https://github.com/cephiii94/brichdigital
+4:38:53 AM: Preparing Git Reference refs/heads/main
+4:38:54 AM: Installing dependencies
+4:38:54 AM: mise ~/.config/mise/config.toml tools: python@3.14.3
+4:38:54 AM: mise ~/.config/mise/config.toml tools: ruby@3.4.8
+4:38:55 AM: mise ~/.config/mise/config.toml tools: go@1.26.2
+4:38:55 AM: Downloading and installing node v22.22.3...
+4:38:55 AM: Downloading https://nodejs.org/dist/v22.22.3/node-v22.22.3-linux-x64.tar.xz...
+4:38:55 AM: Computing checksum with sha256sum
+4:38:55 AM: Checksums matched!
+4:38:58 AM: Now using node v22.22.3 (npm v10.9.8)
+4:38:58 AM: Enabling Node.js Corepack
+4:38:58 AM: No npm workspaces detected
+4:38:58 AM: Installing npm packages using npm version 10.9.8
+4:39:06 AM: added 365 packages in 8s
+4:39:06 AM: npm packages installed
+4:39:07 AM: Successfully installed dependencies
+4:39:07 AM: Detected 1 framework(s)
+4:39:07 AM: "next" at version "16.2.9"
+4:39:07 AM: Starting build script
+4:39:07 AM: Section completed: initializing
+4:39:10 AM: ​
+4:39:10 AM: Netlify Build                                                 
+4:39:10 AM: ────────────────────────────────────────────────────────────────
+4:39:10 AM: ​
+4:39:10 AM: ❯ Version
+4:39:10 AM:   @netlify/build 35.15.0
+4:39:10 AM: ​
+4:39:10 AM: ❯ Flags
+4:39:10 AM:   accountId: 67e4e7a51f42958fb0243044
+4:39:10 AM:   baseRelDir: true
+4:39:10 AM:   buildId: 6a3062dbf8c8d44fb4809e99
+4:39:10 AM:   deployId: 6a3062dbf8c8d44fb4809e9b
+4:39:10 AM: ​
+4:39:10 AM: ❯ Current directory
+4:39:10 AM:   /opt/build/repo
+4:39:10 AM: ​
+4:39:10 AM: ❯ Config file
+4:39:10 AM:   No config file was defined: using default values.
+4:39:10 AM: ​
+4:39:10 AM: ❯ Context
+4:39:10 AM:   production
+4:39:10 AM: ​
+4:39:10 AM: ❯ Installing extensions
+4:39:10 AM:    - neon
+4:39:26 AM: ​
+4:39:26 AM: ❯ Using Next.js Runtime - v5.15.11
+4:39:26 AM: ​
+4:39:26 AM: ❯ Loading extensions
+4:39:26 AM:    - neon
+4:39:27 AM: No Next.js cache to restore
+4:39:27 AM: ​
+4:39:27 AM: Build command from Netlify app                                
+4:39:27 AM: ────────────────────────────────────────────────────────────────
+4:39:27 AM: ​
+4:39:27 AM: $ npm run build
+4:39:27 AM: > brichdigital@0.1.0 build
+4:39:27 AM: > next build
+4:39:27 AM: ⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+4:39:27 AM: ▲ Next.js 16.2.9 (Turbopack)
+4:39:27 AM:   Creating an optimized production build ...
+4:39:35 AM: > Build error occurred
+4:39:35 AM: Error: Turbopack build failed with 2 errors:
+4:39:35 AM: ./src/components/Contact.tsx:5:1
+4:39:35 AM: Export Twitter doesn't exist in target module
+  3 | import { useRef } from "react";
+4:39:35 AM:   4 | import { motion, useInView } from "framer-motion";
+4:39:35 AM: > 5 | import { Mail, Twitter, GitBranch } from "lucide-react";
+4:39:35 AM:     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4:39:35 AM:   6 |
+4:39:35 AM:   7 | const socialLinks = [
+4:39:35 AM:   8 |   {
+4:39:35 AM: The export Twitter was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+4:39:35 AM: Did you mean to import Timer?
+4:39:35 AM: All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+4:39:35 AM: Import trace:
+4:39:35 AM:   Server Component:
+4:39:35 AM:     ./src/components/Contact.tsx
+4:39:35 AM:     ./src/app/page.tsx
+4:39:35 AM: ./src/components/Contact.tsx:5:1
+4:39:35 AM: Export Twitter doesn't exist in target module
+  3 | import { useRef } from "react";
+4:39:35 AM:   4 | import { motion, useInView } from "framer-motion";
+4:39:35 AM: > 5 | import { Mail, Twitter, GitBranch } from "lucide-react";
+4:39:35 AM:     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4:39:35 AM:   6 |
+4:39:35 AM:   7 | const socialLinks = [
+4:39:35 AM:   8 |   {
+4:39:35 AM: The export Twitter was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+4:39:35 AM: Did you mean to import Timer?
+4:39:35 AM: All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+4:39:35 AM: Import trace:
+4:39:35 AM:   Server Component:
+4:39:35 AM:     ./src/components/Contact.tsx
+4:39:35 AM:     ./src/app/page.tsx
+4:39:35 AM:     at <unknown> (./src/components/Contact.tsx:5:1)
+4:39:35 AM:     at <unknown> (./src/components/Contact.tsx:5:1)
+4:39:36 AM: Failed during stage 'building site': Build script returned non-zero exit code: 2
+4:39:36 AM: ​
+4:39:36 AM: "build.command" failed                                        
+4:39:36 AM: ────────────────────────────────────────────────────────────────
+4:39:36 AM: ​
+4:39:36 AM:   Error message
+4:39:36 AM:   Command failed with exit code 1: npm run build
+4:39:36 AM: ​
+4:39:36 AM:   Error location
+4:39:36 AM:   In Build command from Netlify app:
+4:39:36 AM:   npm run build
+4:39:36 AM: ​
+4:39:36 AM:   Resolved config
+4:39:36 AM:   build:
+4:39:36 AM:     command: npm run build
+4:39:36 AM:     commandOrigin: ui
+4:39:36 AM:     publish: /opt/build/repo/.next
+4:39:36 AM:     publishOrigin: ui
+4:39:36 AM:   plugins:
+4:39:36 AM:     - inputs: {}
+4:39:36 AM:       origin: ui
+4:39:36 AM:       package: "@netlify/plugin-nextjs"
+4:39:36 AM: Build failed due to a user error: Build script returned non-zero exit code: 2
+4:39:36 AM: Failing build: Failed to build site
+4:39:37 AM: Finished processing build request in 44.081s
