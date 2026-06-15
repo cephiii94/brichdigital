@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { EASE } from "@/lib/motion";
 import {
   Bot,
   Wrench,
@@ -141,7 +142,7 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
       transition={{
         duration: 0.55,
         delay: index * 0.07,
-        ease: [0.22, 1, 0.36, 1],
+        ease: EASE,
       }}
       className="group relative flex flex-col bg-white rounded-2xl border border-slate-100 p-6 hover:shadow-lg hover:shadow-slate-100 hover:-translate-y-1 transition-all duration-300"
     >
@@ -214,7 +215,7 @@ export default function Ecosystem() {
           ref={titleRef}
           initial={{ opacity: 0, y: 20 }}
           animate={titleInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.55, ease: EASE }}
           className="max-w-2xl mb-14"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-100 border border-sky-200 text-sky-600 text-xs font-semibold tracking-wide uppercase mb-4">
