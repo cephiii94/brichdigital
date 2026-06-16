@@ -18,7 +18,7 @@ const socialLinks = [
   },
   {
     label: "Email",
-    href: "mailto:hello@brichdigital.com",
+    href: "mailto:hello.brichdigital@gmail.com",
     icon: <Mail size={16} />,
   },
 ];
