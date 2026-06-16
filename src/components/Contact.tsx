@@ -54,12 +54,12 @@ export default function Contact() {
           </p>
 
           <a
-            href="mailto:hello@brichdigital.com"
+            href="mailto:hello.brichdigital@gmail.com"
             id="contact-email-cta"
             className="inline-flex items-center gap-2 mt-3 px-6 py-3.5 rounded-xl bg-sky-500 text-white font-semibold text-sm hover:bg-sky-600 transition-all duration-200 shadow-md shadow-sky-200"
           >
             <Mail size={15} />
-            hello@brichdigital.com
+            hello.brichdigital@gmail.com
           </a>
 
           {/* Social row */}
