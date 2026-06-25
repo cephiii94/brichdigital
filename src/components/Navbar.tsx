@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+
 
 const navLinks = [
   { label: "Ecosystem", href: "#ecosystem" },
@@ -33,8 +35,16 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-1 font-bold text-xl tracking-tight"
+          className="flex items-center gap-2 font-bold text-xl tracking-tight"
         >
+          <Image
+            src="/logo.png"
+            alt="Brich Digital Logo"
+            width={32}
+            height={35}
+            priority
+            className="w-auto h-8 object-contain"
+          />
           <span className="text-sky-500">Brich</span>
           <span className="text-slate-800"> Digital</span>
         </Link>
