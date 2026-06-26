@@ -84,7 +84,7 @@ export default function About() {
             <div className="bg-gradient-to-br from-sky-50 to-slate-100 rounded-2xl border border-slate-100 p-8 space-y-6">
               <div className="grid grid-cols-2 gap-5">
                 {[
-                  { value: "4+", label: "Active Projects" },
+                  { value: "5+", label: "Active Projects" },
                   { value: "3", label: "Product Categories" },
                   { value: "2026", label: "Founded" },
                   { value: "100%", label: "Indie Built" },

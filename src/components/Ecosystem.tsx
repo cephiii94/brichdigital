@@ -13,6 +13,7 @@ import {
   ExternalLink,
   ArrowRight,
   Construction,
+  Globe,
 } from "lucide-react";
 
 interface Product {
@@ -71,6 +72,20 @@ const products: Product[] = [
     href: "https://enoted.zone.id",
     accent: "text-emerald-600",
     accentBg: "bg-emerald-50 border-emerald-100",
+  },
+  {
+    id: "upshare",
+    name: "upshare.id",
+    url: "upshare.id",
+    tagline: "Subdomain Proxy & Web Templates",
+    description:
+      "A custom subdomain proxy provider (xxx.upshare.id) combined with a premium library of web templates. Easily deploy digital invitations, biolink shops, and landing pages on your own custom subdomain.",
+    icon: <Globe size={22} />,
+    tags: ["Hosting", "Templates", "Utility"],
+    status: "Live",
+    href: "https://upshare.id",
+    accent: "text-indigo-600",
+    accentBg: "bg-indigo-50 border-indigo-100",
   },
   {
     id: "noteonline",
@@ -224,8 +239,9 @@ export default function Ecosystem() {
             Products we build and own
           </h2>
           <p className="text-base text-slate-500 leading-relaxed">
-            Six products across AI, productivity, and games — each independently
-            built and maintained. Some are live, some are still being shaped.
+            Seven products across AI, productivity, templates, and games — each
+            independently built and maintained. Some are live, some are still
+            being shaped.
           </p>
         </motion.div>
 
